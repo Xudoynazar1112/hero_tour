@@ -1,0 +1,92 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="icon" href="../media/HERO_TRAVEL.png">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+<nav>
+    <div class="info">
+        <div class="info-left">
+            <i class="fa-regular fa-envelope"></i>
+            <a href="https://herotour@gmail.com">herotour@gmail.com</a>
+            <span id="stick"></span>
+            <i class="fa-solid fa-phone"></i>
+            <span>+998 88 301 33 33</span>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61564631317529&mibextid=JRoKGi"><i
+                    class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://t.me/herotourismuz"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.instagram.com/hero.tourr?igsh=eHlzZ2txZzZoNDgx"><i
+                    class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="/media/HERO_TRAVEL.png" alt="logo"/></a>
+            <span class="logo-name">Hero Tour</span>
+        </div>
+
+        <ul>
+            <li><a href="{% url 'index' %}">{% blocktrans %}Bosh sahifa{% endblocktrans %}</a></li>
+            <li><a href="{% url 'about' %}">{% blocktrans %}Biz haqida{% endblocktrans %}</a></li>
+            <li><a href="{% url 'destination' %}">{% blocktrans %}Turlar{% endblocktrans %}</a></li>
+            <li><a href="{% url 'contact' %}">{% blocktrans %}Aloqa{% endblocktrans %}</a></li>
+            <li>
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                    selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <input class="btn" type="submit" value="Go">
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+<footer>
+    <div class="foot">
+        <h3>{% blocktrans %}Biz haqimizda{% endblocktrans %}</h3>
+        <p>{% blocktrans %}Sayyohlik agentligimiz tomonidan yuborilgan mamlakatlar va shaharlar Bizning kompaniyamiz eng
+            yaxshi sifatni ta'minlaydi
+            sayohatingiz uchun xizmatlar.{% endblocktrans %}</p>
+    </div>
+    <div class="foot">
+        <h3>{% blocktrans %}Biz bilan aloqa{% endblocktrans %}</h3>
+        <p>{% blocktrans %}Toshkent, Mirobod tumani, yangizamon 10/16{% endblocktrans %}</p>
+    </div>
+    <div class="foot">
+        <h3>{% blocktrans %}Aloqa uchun telefon:{% endblocktrans %}</h3>
+        <span>{% blocktrans %}Ofis:{% endblocktrans %}</span>
+        <p>+998 88 301 33 33</p>
+    </div>
+    <div class="foot">
+        <h3>{% blocktrans %}Ish vaqti{% endblocktrans %}</h3>
+        <p>{% blocktrans %}Ish vaqti: har kuni 10 dan 19:00 gacha{% endblocktrans %}</p>
+        <span>{% blocktrans %}Direktor{% endblocktrans %}</span>
+        <p>{% blocktrans %}Chindaliyev Umid Maxamatkul o'g'li{% endblocktrans %}</p>
+    </div>
+</footer>
+<script src="{% static 'main.js' %}"></script>
+</div>
+</body>
+</html>

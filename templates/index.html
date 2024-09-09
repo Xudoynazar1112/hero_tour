@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}Hero Tour{% endblock %}
+{% block content %}
+    <section id="main">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="/media/img1.jpg" alt="img-1">
+                <img id="slide-2" src="/media/img2.jpg" alt="img-2">
+                <img id="slide-3" src="/media/img5.jpg" alt="img-3">
+                <img id="slide-4" src="/media/img6.jpg" alt="img-4">
+                <img id="slide-5" src="/media/img7.jpg" alt="img-5">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+            </div>
+        </div>
+        <h2>{% blocktrans %}Turlar{% endblocktrans %}</h2>
+        <div class="tours">
+            {% for travel in travels %}
+                <div class="card">
+                    <img class="card-image" src="{{ travel.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5>{{ travel.title }}</h5>
+                        <span>Price: {{ travel.price }}</span>
+                        <p class="card-text">{{ travel.text | truncatewords:10 }}</p>
+                        <a href="{% url 'detail' travel.id %}" class="btn">{% blocktrans %}Buyurta
+                            berish{% endblocktrans %}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <h2>{% blocktrans %}Bizning joylashuvimiz{% endblocktrans %}</h2>
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d7061.963538963234!2d69.3009032800574!3d41.28033629157334!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE2JzQ4LjYiTiA2OcKwMTgnMDQuMyJF!5e0!3m2!1sen!2s!4v1725900920333!5m2!1sen!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n%}
+{% block title %}Detail{% endblock %}
+{% block content %}
+    <section id="detail">
+        <img src="{{ travel.image.url }}" alt="image" />
+        <div>
+            <p>{% blocktrans %}Sayohat:{% endblocktrans %} {{ travel.title }}</p><br><hr>
+            <p>{{ travel.text }}</p>
+            <p>{{ travel.price }}</p>
+            <form method="post">
+                {% csrf_token %}
+                <label for="name">{% blocktrans %}Ismingiz:{% endblocktrans %}</label>
+                <input id="name" type="text" name="name">
+                <label for="email">{% blocktrans %}E-mailingiz:{% endblocktrans %}</label>
+                <input id="email" type="text" name="email">
+                <label for="tour">{% blocktrans %}Tur nomi:{% endblocktrans %}</label>
+                <input id="tour" type="text" name="tour" value="{{ travel.title }}">
+                <input type="submit" value="Buyurtma bermoq">
+            </form>
+        </div>
+    </section>
+{% endblock %}

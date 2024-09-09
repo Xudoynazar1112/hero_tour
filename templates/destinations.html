@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+    <h2>{% blocktrans %}Turlar{% endblocktrans %}</h2>
+    <div class="tours">
+            {% for travel in travels %}
+            <div class="card">
+                <img class="card-image" src="{{ travel.image.url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5>{{ travel.title }}</h5>
+                    <span>Price: {{ travel.price }}</span>
+                    <p class="card-text">{{ travel.text }}</p>
+                    <a href="{% url 'detail' travel.id %}" class="btn">{% blocktrans %}Buyurta berish{% endblocktrans %}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}
