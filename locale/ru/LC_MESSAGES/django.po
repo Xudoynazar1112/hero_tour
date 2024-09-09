@@ -1331,8 +1331,8 @@ msgid "Biz bilan aloqa"
 msgstr "Связаться с нами"
 
 #: .\templates\base.html:75
-msgid "Toshkent, Mirobod tumani, yangizamon 10/16"
-msgstr "Ташкент, Мирабадский район, новая эра 16.10."
+msgid "Manzil: Toshkent, Mirobod tumani, yangizamon 10/16"
+msgstr "Адрес: Ташкент, Мирабадский район, новая эра 16.10."
 
 #: .\templates\base.html:78
 msgid "Aloqa uchun telefon:"
@@ -1360,7 +1360,7 @@ msgstr "Чиндалиев Умид Махаматкулович"
 
 #: .\templates\contact.html:8
 msgid "Manzil:"
-msgstr "Адрес"
+msgstr "Адрес:"
 
 #: .\templates\contact.html:9
 msgid "Toshkent, Mirobod tumani, yangizamon 10/16"

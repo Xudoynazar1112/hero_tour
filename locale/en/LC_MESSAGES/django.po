@@ -1328,8 +1328,8 @@ msgid "Biz bilan aloqa"
 msgstr "Contact us"
 
 #: .\templates\base.html:75
-msgid "Toshkent, Mirobod tumani, yangizamon 10/16"
-msgstr "Tashkent, Mirabad district, new era 10/16"
+msgid "Manzil: Toshkent, Mirobod tumani, yangizamon 10/16"
+msgstr "Address: Tashkent, Mirabad district, new era 10/16"
 
 #: .\templates\base.html:78
 msgid "Aloqa uchun telefon:"
