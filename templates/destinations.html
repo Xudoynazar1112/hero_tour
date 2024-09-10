@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h5>{{ travel.title }}</h5>
                     <span>Price: {{ travel.price }}</span>
-                    <p class="card-text">{{ travel.text }}</p>
+                    <p class="card-text">{{ travel.text | truncatewords:10 }}</p>
                     <a href="{% url 'detail' travel.id %}" class="btn">{% blocktrans %}Buyurta berish{% endblocktrans %}</a>
                 </div>
             </div>

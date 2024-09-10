@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-09 22:46+0500\n"
+"POT-Creation-Date: 2024-09-10 07:09+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1260,7 +1260,7 @@ msgstr ""
 
 #: .\templates\about.html:6 .\templates\base.html:41
 msgid "Biz haqida"
-msgstr ""
+msgstr "About us"
 
 #: .\templates\about.html:7
 msgid ""
@@ -1288,14 +1288,15 @@ msgid ""
 msgstr ""
 "In recent years, the demand for the proper organization of recreation in "
 "Uzbekistan has increased significantly. In this regard, the number of various "
-"tourist offers has increased. In order not to get lost in such different private "
-"trips, it is necessary to have up-to-date information about the peculiarities "
-"of organizing rest in private countries. Our travel agency attracts experienced "
-"specialists in organizing trips of any level of complexity for individual and "
-"group vacations. We offer a full range of quality travel services at affordable "
-"prices. My gift to you is not only confidence that your trip will be successful, "
-"but also a pleasant and enjoyable vacation. You can completely trust us! "
-"<br>Director: Chindaliyev Umid Makhamatkulovich. Opening hours: daily from 10:00 to 19:00."
+"tourist offers has increased. In order not to get lost in such a variety of private "
+"trips, for up-to-date information about the peculiarities of organizing holidays "
+"in private countries"
+ "must have. Our travel agency is experienced in organizing trips of any level of "
+ "complexity for individual and group vacations attracts specialists. We offer a "
+ "full set of quality travel services on favorable terms. My gift to you is not only "
+ "confidence in the successful organization of your trip, but also a pleasant and "
+ "enjoyable vacation. You can completely trust us! <br>Director : Chindaliyev, son of "
+ "Umid Makhamatkul.Working hours: every day from 10:00 to 19:00."
 
 #: .\templates\base.html:40
 msgid "Bosh sahifa"
@@ -1329,15 +1330,15 @@ msgstr "Contact us"
 
 #: .\templates\base.html:75
 msgid "Manzil: Toshkent, Mirobod tumani, yangizamon 10/16"
-msgstr "Address: Tashkent, Mirabad district, new era 10/16"
+msgstr "Address: Tashkent, Mirabad district, Yanizamon 10/16"
 
 #: .\templates\base.html:78
 msgid "Aloqa uchun telefon:"
-msgstr "Call:"
+msgstr "Phone for call:"
 
 #: .\templates\base.html:79
 msgid "Ofis:"
-msgstr "Office:"
+msgstr "Office"
 
 #: .\templates\base.html:83
 msgid "Ish vaqti"
@@ -1345,7 +1346,7 @@ msgstr "Working time"
 
 #: .\templates\base.html:84
 msgid "Ish vaqti: har kuni 10 dan 19:00 gacha"
-msgstr "Working time: everyday from 10:00, to 19:00"
+msgstr "Working time: everyday from 10am to 7pm"
 
 #: .\templates\base.html:85
 msgid "Direktor"
@@ -1357,7 +1358,7 @@ msgstr "Chindaliyev Umid Makhamatkulovich"
 
 #: .\templates\contact.html:8
 msgid "Manzil:"
-msgstr "Address"
+msgstr "Address:"
 
 #: .\templates\contact.html:9
 msgid "Toshkent, Mirobod tumani, yangizamon 10/16"
@@ -1365,7 +1366,7 @@ msgstr "Tashkent, Mirabad district, new era 10/16"
 
 #: .\templates\contact.html:10
 msgid "E-pochta orqali biz bilan bog'lanish: "
-msgstr "Contact us by email"
+msgstr "Contact us by email: "
 
 #: .\templates\contact.html:12
 msgid "Qo'ng'iroq qiling:"
