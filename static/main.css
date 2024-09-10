@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
 
 * {
     margin: 0;
@@ -19,6 +21,13 @@ body {
 }
 .container {
     background-color: rgba(255, 255, 255, 0.9);
+}
+.logo-name {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3.3rem;
+    letter-spacing: 3px;
 }
 a {
     text-decoration: none;
@@ -107,7 +116,7 @@ a {
     /*font-family: "Kalam", cursive;*/
     /*font-weight: 300;*/
     /*font-style: normal;*/
-    font-size: 2.2rem;
+    /*font-size: 2.2rem;*/
     margin-left: 20px;
 }
 
